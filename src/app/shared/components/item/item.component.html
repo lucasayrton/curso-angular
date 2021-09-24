@@ -1,0 +1,9 @@
+<mat-card class="container">
+  <img [src]="item.urlImg" />
+  <h3>{{ item.nome }}</h3>
+  <p>{{ item.valor | currency: "BRL" }}</p>
+
+  <button mat-raised-button color="primary" (click)="adicionar(item)">
+    Adicionar
+  </button>
+</mat-card>

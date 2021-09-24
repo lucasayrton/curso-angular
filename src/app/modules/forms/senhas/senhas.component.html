@@ -1,0 +1,16 @@
+<form [formGroup]="formPass" class="form">
+  <div class="input">
+    <mat-form-field appearance="fill">
+      <mat-label>Senha</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+  </div>
+
+  <div class="input">
+    <mat-form-field appearance="fill">
+      <mat-label>Confirme sua senha</mat-label>
+      <input matInput formControlName="passwordConfirm" />
+    </mat-form-field>
+  </div>
+</form>
+<button mat-raised-button (click)="entrar()">Entrar</button>

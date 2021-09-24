@@ -1,0 +1,29 @@
+<h3>Carrinho de Compras</h3>
+
+<mat-list>
+  <mat-list-item *ngFor="let item of lista">
+    <div class="list-item">
+      <img matListAvatar [src]="item.item.urlImg" [alt]="item.item.nome" />
+      {{ item.item.nome }} - {{ item.quantidade }} -
+      {{ item.valorTotal | currency: "BRL" }}
+      <mat-action-list class="actions">
+        <button
+          mat-list-item
+          color="primary"
+          (click)="adicionarItem(item.item)"
+          style="font-size: 20px"
+        >
+          +
+        </button>
+        <button
+          mat-list-item
+          color="warn"
+          (click)="removerItem(item.item.id)"
+          style="font-size: 20px"
+        >
+          -
+        </button>
+      </mat-action-list>
+    </div>
+  </mat-list-item>
+</mat-list>

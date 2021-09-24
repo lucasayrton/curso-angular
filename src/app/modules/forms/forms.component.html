@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="input">
+    <mat-checkbox [formControl]="mesmaTitularidade" (change)="changeCheckbox()"
+      >Mesma titularidade?</mat-checkbox
+    >
+  </div>
+
+  <form [formGroup]="form" class="form">
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo de Conta</mat-label>
+        <mat-select formControlName="tipoConta">
+          <mat-option *ngFor="let item of tiposDeConta" [value]="item.value">
+            {{ item.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="input" *ngIf="!mesmaTitularidade.value">
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome" />
+      </mat-form-field>
+    </div>
+
+    <div class="input" *ngIf="!mesmaTitularidade.value">
+      <mat-form-field appearance="fill">
+        <mat-label>CPF / CNPJ</mat-label>
+        <input
+          matInput
+          formControlName="cpjCnpj"
+          mask="000.000.000-00||00.000.000/0000-00"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Agencia</mat-label>
+        <input matInput formControlName="agencia" />
+      </mat-form-field>
+    </div>
+
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Conta</mat-label>
+        <input matInput formControlName="conta" />
+      </mat-form-field>
+    </div>
+
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Digito</mat-label>
+        <input matInput formControlName="digito" />
+      </mat-form-field>
+    </div>
+
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="form.get('email')?.invalid">{{
+          getEmailErrorMessage()
+        }}</mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+  <button mat-raised-button (click)="enviar()">Enviar</button>
+
+  <app-senhas [formPass]="formPass"></app-senhas>
+</div>

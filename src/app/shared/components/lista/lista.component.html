@@ -1,0 +1,8 @@
+<div class="container">
+  <app-item
+    *ngFor="let item of itens"
+    [item]="item"
+    (onAdicionarItem)="adicionar($event)"
+  ></app-item>
+  <p *ngIf="!itens.length">Não possui itens na lista.</p>
+</div>

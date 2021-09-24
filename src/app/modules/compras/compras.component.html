@@ -1,0 +1,13 @@
+<!-- <button (click)="adicionar()">Teste OnChanges</button> -->
+<!-- <input #nomeInput placeholder="Nome" /> -->
+
+<div class="container">
+  <div class="lista">
+    <app-lista [itens]="itens" [ois]="ois"></app-lista>
+  </div>
+  <div class="carrinho">
+    <app-carrinho-compras
+      [lista]="carrinhoCompraService.listaCarrinho"
+    ></app-carrinho-compras>
+  </div>
+</div>

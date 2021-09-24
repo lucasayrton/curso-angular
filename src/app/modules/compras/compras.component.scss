@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  height: calc(100vh - 64px);
+
+  .lista {
+    width: 70vw;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .carrinho {
+    width: 30vw;
+    padding: 10px;
+    background-color: #e0e0e0;
+  }
+}

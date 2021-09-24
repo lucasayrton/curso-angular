@@ -1,0 +1,10 @@
+<div class="container">
+  <p>{{ dataAtual | date: "dd/MM/yyyy '-' hh:mm" }}</p>
+  <p>{{ 2500 | currency: "BRL" }}</p>
+  <p>{{ 2500 | currency: "EUR" }}</p>
+  <p>{{ promise | async }}</p>
+  <p>{{ "93467123090" | cpfCnpj }}</p>
+  <p>{{ "37401894000131" | cpfCnpj }}</p>
+  <p [ngClass]="true ? 'red' : 'blue'">Teste da Diretiva ngClass</p>
+  <p appHighlight>Teste da Diretiva Highlight</p>
+</div>
