@@ -35,8 +35,8 @@ export class FormsComponent implements OnInit {
   private createForm(): void {
     this.form = this.fb.group({
       tipoConta: [1, [Validators.required]],
-      nome: [''],
-      cpjCnpj: [''],
+      nome: ['', [Validators.required]],
+      cpjCnpj: ['', [Validators.required]],
       agencia: ['', [Validators.required]],
       conta: ['', [Validators.required]],
       digito: ['', [Validators.required]],
