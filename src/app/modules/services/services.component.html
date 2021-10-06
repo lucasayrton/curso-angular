@@ -1,0 +1,11 @@
+<div class="container">
+  <button mat-raised-button (click)="getPokemon()">Get Pokémon</button>
+  <button mat-raised-button (click)="getPokemonError()">
+    Get Pokémon Error
+  </button>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nome Pokémon</mat-label>
+    <input matInput id="nome-pokemon" [formControl]="nomePokemon" />
+  </mat-form-field>
+</div>

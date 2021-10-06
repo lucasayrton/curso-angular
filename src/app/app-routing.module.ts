@@ -24,6 +24,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/forms/forms.module').then((m) => m.FormsRoutingModule),
   },
+  {
+    path: 'services',
+    loadChildren: () =>
+      import('./modules/services/services.module').then(
+        (m) => m.ServicesRoutingModule
+      ),
+  },
 ];
 
 @NgModule({

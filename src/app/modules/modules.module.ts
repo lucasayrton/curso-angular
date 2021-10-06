@@ -8,6 +8,7 @@ import { DirectivesModule } from '../core/directives/directives.module';
 import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SenhasComponent } from './forms/senhas/senhas.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SenhasComponent } from './forms/senhas/senhas.component';
     PipesDiretivasComponent,
     FormsComponent,
     SenhasComponent,
+    ServicesComponent,
   ],
   imports: [
     PipesModule,
