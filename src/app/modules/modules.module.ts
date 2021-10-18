@@ -9,6 +9,7 @@ import { FormsComponent } from './forms/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SenhasComponent } from './forms/senhas/senhas.component';
 import { ServicesComponent } from './services/services.component';
+import { TestesComponent } from './testes/testes.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ServicesComponent } from './services/services.component';
     FormsComponent,
     SenhasComponent,
     ServicesComponent,
+    TestesComponent,
   ],
   imports: [
     PipesModule,
